@@ -4,6 +4,7 @@ const app = express();
 var bodyparser = require('body-parser');
 
 app.use(bodyparser.json());
+app.use(express.static( __dirname + '/public/dist/public'));
 
 require('./backend/models/task.js');
 
